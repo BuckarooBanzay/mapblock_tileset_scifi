@@ -20,6 +20,30 @@ mapblock_tileset.register_tileset("strut", {
             fallback = true,
             rotations = {0}
         },{
+            -- upside L shape
+            positions = {{x=0,y=0,z=0}},
+            rules = {
+                ["0,1,0"] = {groups={"strut"}},
+                ["1,0,0"] = {groups={"strut"}}
+            },
+            rotations = {0,90,180,270}
+        },{
+            -- downside L shape
+            positions = {{x=0,y=0,z=0}},
+            rules = {
+                ["0,-1,0"] = {groups={"strut"}},
+                ["1,0,0"] = {groups={"strut"}}
+            },
+            rotations = {0,90,180,270}
+        },{
+            -- sideways L shape
+            positions = {{x=0,y=0,z=0}},
+            rules = {
+                ["0,0,1"] = {groups={"strut"}},
+                ["1,0,0"] = {groups={"strut"}}
+            },
+            rotations = {0,90,180,270}
+        },{
             -- top
             positions = {{x=0,y=3,z=0}},
             rules = {
