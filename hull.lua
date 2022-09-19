@@ -90,6 +90,7 @@ mapblock_tileset.register_tileset("hull", {
                 ["-1,0,0"] = g_hull,
                 ["1,0,0"] = g_hull,
                 ["0,1,0"] = g_hull,
+                ["0,0,1"] = g_hull,
             },
             rotations = {0,90,180,270}
         },{
