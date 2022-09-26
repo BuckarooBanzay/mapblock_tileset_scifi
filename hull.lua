@@ -29,6 +29,7 @@ mapblock_tileset.register_tileset("hull", {
                 ["0,1,0"] = {not_groups={"spaceship_inside"}},
                 ["0,-1,0"] = g_inside,
                 ["0,0,1"] = g_inside,
+                ["0,0,-1"] = {not_groups={"spaceship_inside"}},
                 ["1,0,0"] = g_inside,
                 ["-1,0,0"] = g_inside
             },
@@ -37,9 +38,10 @@ mapblock_tileset.register_tileset("hull", {
             -- lower corner
             positions = {{x=0,y=0,z=0}},
             rules = {
-                ["0,-1,0"] = {not_groups={"spaceship_inside"}},
                 ["0,1,0"] = g_inside,
+                ["0,-1,0"] = {not_groups={"spaceship_inside"}},
                 ["0,0,1"] = g_inside,
+                ["0,0,-1"] = {not_groups={"spaceship_inside"}},
                 ["1,0,0"] = g_inside,
                 ["-1,0,0"] = g_inside
             },
@@ -48,8 +50,10 @@ mapblock_tileset.register_tileset("hull", {
             -- center edge
             positions = {{x=1,y=1,z=0}},
             rules = {
+                ["1,0,0"] = {not_groups={"spaceship_inside"}},
                 ["-1,0,0"] = g_inside,
                 ["0,0,1"] = g_inside,
+                ["0,0,-1"] = {not_groups={"spaceship_inside"}},
                 ["0,1,0"] = g_inside,
                 ["0,-1,0"] = g_inside
             },
@@ -58,17 +62,23 @@ mapblock_tileset.register_tileset("hull", {
             -- lower edge
             positions = {{x=1,y=0,z=0}},
             rules = {
+                ["1,0,0"] = {not_groups={"spaceship_inside"}},
                 ["-1,0,0"] = g_inside,
                 ["0,0,1"] = g_inside,
-                ["0,1,0"] = g_inside
+                ["0,0,-1"] = {not_groups={"spaceship_inside"}},
+                ["0,1,0"] = g_inside,
+                ["0,-1,0"] = {not_groups={"spaceship_inside"}}
             },
             rotations = {0,90,180,270}
         },{
             -- upper edge
             positions = {{x=1,y=2,z=0}},
             rules = {
+                ["1,0,0"] = {not_groups={"spaceship_inside"}},
                 ["-1,0,0"] = g_inside,
                 ["0,0,1"] = g_inside,
+                ["0,0,-1"] = {not_groups={"spaceship_inside"}},
+                ["0,1,0"] = {not_groups={"spaceship_inside"}},
                 ["0,-1,0"] = g_inside
             },
             rotations = {0,90,180,270}

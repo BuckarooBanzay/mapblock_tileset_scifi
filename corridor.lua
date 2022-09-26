@@ -39,6 +39,25 @@ mapblock_tileset.register_tileset("corridor", {
             },
             rotations = {0,90}
         },{
+            -- Straight door to Z+
+            positions = {{x=2,y=1,z=0}},
+            rules = {
+                ["1,0,0"] = { groups = {"corridor"} },
+                ["-1,0,0"] = { groups = {"corridor"} },
+                ["0,0,1"] = { groups = {"corridor_door"}}
+            },
+            rotations = {0,90,180,270}
+        },{
+            -- Straight door to Z+ and Z-
+            positions = {{x=1,y=1,z=0}},
+            rules = {
+                ["1,0,0"] = { groups = {"corridor"} },
+                ["-1,0,0"] = { groups = {"corridor"} },
+                ["0,0,1"] = { groups = {"corridor_door"}},
+                ["0,0,-1"] = { groups = {"corridor_door"}}
+            },
+            rotations = {0,90,180,270}
+        },{
             -- Straight window to Z-
             positions = {{x=3,y=1,z=0}},
             rules = {
