@@ -16,12 +16,11 @@ mapblock_tileset.register_tileset("view_deck", {
         {
             positions = {{x=0,y=0,z=0}},
             rules = {
-                ["-1,0,0"] = g_inside,
-                ["1,0,0"] = g_inside,
                 ["0,0,1"] = {not_groups={"spaceship_inside"}},
                 ["0,0,-1"] = {groups={"corridor"}}
             },
-            rotations = {0,90,180,270}
+            rotations = {0,90,180,270},
+            fallback = true
         }
     }
 })
