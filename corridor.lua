@@ -3,7 +3,8 @@ local MP = minetest.get_modpath(minetest.get_current_modname())
 mapblock_tileset.register_tileset("corridor", {
     catalog = MP .. "/schematics/corridor.zip",
     groups = {
-        corridor = true
+        corridor = true,
+        spaceship_inside = true
     },
     disable_orientation = {
         ["scifi_nodes:octofloor"] = true
@@ -43,7 +44,7 @@ mapblock_tileset.register_tileset("corridor", {
             rules = {
                 ["1,0,0"] = { groups = {"corridor"} },
                 ["-1,0,0"] = { groups = {"corridor"} },
-                ["0,0,-1"] = { not_groups = {"hull_inside"}}
+                ["0,0,-1"] = { not_groups = {"spaceship_inside"}}
             },
             rotations = {0,90,180,270}
         },{
@@ -52,8 +53,8 @@ mapblock_tileset.register_tileset("corridor", {
             rules = {
                 ["1,0,0"] = { groups = {"corridor"} },
                 ["-1,0,0"] = { groups = {"corridor"} },
-                ["0,0,-1"] = { not_groups = {"hull_inside"}},
-                ["0,0,1"] = { not_groups = {"hull_inside"}}
+                ["0,0,-1"] = { not_groups = {"spaceship_inside"}},
+                ["0,0,1"] = { not_groups = {"spaceship_inside"}}
             },
             rotations = {0,90}
         },{
@@ -94,7 +95,8 @@ mapblock_tileset.register_tileset("corridor", {
 mapblock_tileset.register_tileset("corridor_stairs", {
     catalog = MP .. "/schematics/corridor.zip",
     groups = {
-        corridor_stairs = true
+        corridor_stairs = true,
+        spaceship_inside = true
     },
     disable_orientation = {
         ["scifi_nodes:octofloor"] = true
