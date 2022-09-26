@@ -38,6 +38,34 @@ mapblock_tileset.register_tileset("corridor", {
             },
             rotations = {0,90}
         },{
+            -- Straight window to Z+
+            positions = {{x=2,y=1,z=0}},
+            rules = {
+                ["1,0,0"] = { groups = {"corridor"} },
+                ["-1,0,0"] = { groups = {"corridor"} },
+                ["0,0,1"] = { not_groups = {"hull_inside"}}
+            },
+            rotations = {0,90,180,270}
+        },{
+            -- Straight window to Z-
+            positions = {{x=3,y=1,z=0}},
+            rules = {
+                ["1,0,0"] = { groups = {"corridor"} },
+                ["-1,0,0"] = { groups = {"corridor"} },
+                ["0,0,-1"] = { not_groups = {"hull_inside"}}
+            },
+            rotations = {0,90,180,270}
+        },{
+            -- Straight window to Z+ and Z-
+            positions = {{x=4,y=1,z=0}},
+            rules = {
+                ["1,0,0"] = { groups = {"corridor"} },
+                ["-1,0,0"] = { groups = {"corridor"} },
+                ["0,0,-1"] = { not_groups = {"hull_inside"}},
+                ["0,0,1"] = { not_groups = {"hull_inside"}}
+            },
+            rotations = {0,90,180,270}
+        },{
             -- Corner
             positions = {{x=0,y=0,z=0}},
             rules = {
